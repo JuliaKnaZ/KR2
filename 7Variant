@@ -1,0 +1,18 @@
+7.Вводится число (пр. 123). Найти число квадрат которого будет ближе всего расположен к введенному числу (пр. 123 → 121 → 11).
+
+import java.util.Scanner;
+
+public class ClosestSquareRoot {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите число: ");
+        int number = scanner.nextInt();
+
+        
+        int closestRoot = (int) Math.round(Math.sqrt(number));
+        int closestSquare = closestRoot * closestRoot;
+
+        System.out.println("Ближайшее целое число, квадрат которого ближе всего к " + number + ": " + closestRoot);
+        System.out.println("Квадрат этого числа: " + closestSquare);
+    }
+}
